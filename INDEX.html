@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>R-responsive</title>
+	<link rel="stylesheet" type="text/css" href="salesforce-lightning-design-system.min.css">
+	<link rel="stylesheet" type="text/css" href="R-custom.css">
+</head>
+<body>
+		<header>
+		<div class="slds-page-header slds-grid Custom_header"> 
+			<div class="slds-page-header__col-title slds-col slds-size_2-of-3 slds-medium-size_6-of-12 slds-media__figure">
+				<img class="Custom-header_logo-width slds-hide_large" onclick="showNav()" id="hamburger" src="assets/rows_60.png">
+				<img class="Custom-header_logo-width slds-hide_large hide" onclick="hideNav()" id="hidden-close"  src="assets/close_60.png">
+				<img class="Custom-header_logo-width slds-p-left_small" id="" src="assets/R icon2.webp">
+			</div>
+			<div class="Custom-header_content slds-col slds-size_1-of-3 slds-medium-size_6-of-12">
+				<div class="slds-page-header__col-actions">
+			      <div class="slds-page-header__controls">
+			        <div class="slds-page-header__control slds-grid slds-show_large">
+			          	<div class="Custom-header_content slds-text-heading_medium border slds-p-right_small" >
+			          	Dashboard
+			            </div>
+			          	<div class="Custom-header_content border slds-p-left_small slds-p-right_small">
+			          		<img class="slds-icon" src="assets/notification_60.png">
+			          	</div>
+			          	<div class="Custom-header_content slds-p-left_small slds-p-right_small">
+							<img class="slds-icon" src="assets/user_60.png">
+			          	</div>
+			          	<div class="Custom-header_content slds-text-heading_medium slds-p-left_small slds-p-right_small">
+			          		Stina Gunnars
+			          	</div>
+			          	<div class="Custom-header_content">
+			          		<img class="slds-icon slds-icon_small slds-m-right_medium" src="assets/chevrondown_60.png">
+			          	</div>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="slds-grid ">
+			<div class="Custom-Sidebar slds-show_large slds-col slds-size_3-of-12" id="sidebar">
+				<div class="demo-only" style="width:260px">
+				  <nav class="slds-nav-vertical" aria-label="Sub page">
+				    <div class="slds-nav-vertical__section">
+				      <!-- <h6 id="entity-header" class="slds-nav-vertical__title ">Summary</h6> -->
+				      <ul aria-describedby="entity-header">
+				      	<li class="slds-nav-vertical__item ">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action Custom-Sidebar_Text-blue" aria-current="true">Summary</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-current="true">Account Summary</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action Custom-Sidebar_Text-blue">Investments</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action">My Investments</a>
+				        </li>
+				        <li class="slds-nav-vertical__item slds-is-active">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action">Investor List</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action Custom-Sidebar_Text-blue">Documents</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action">My Documents</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action">Delegate Documents</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action Custom-Sidebar_Text-blue">Transactions</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action">My Transactions</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action Custom-Sidebar_Text-blue">Delegate</a>
+				        </li>
+				        <li class="slds-nav-vertical__item">
+				          <a href="javascript:void(0);" class="slds-nav-vertical__action">My Delegate</a>
+				        </li>
+				      </ul>
+				    </div>
+				  </nav>
+				</div>
+			</div>
+			<div class="slds-col slds-size_9-of-12" id="data">
+				<div class=" Custom-SearchBar slds-grid slds-p-left_xx-large slds-p-top_x-large slds-text-heading_small slds-show_large Custom-SearchBar_height">
+					<h1 class="slds-col slds-size_1-of-4 slds-text-heading_medium">
+						Investor List
+					</h1>
+				
+					<div class="slds-combobox_container slds-combobox-addon_end Custom-SearchBar_height">
+		          		<div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aria-expanded="false" aria-haspopup="listbox" id="primary-search-combobox-id-1" role="combobox">
+		            		<div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left slds-global-search__form-element" role="none">
+		              			<input type="text" class="slds-input slds-combobox__input Custom-searchInput slds-size_1-of-1" id="combobox-id-2" aria-autocomplete="list" aria-controls="search-listbox-id-1" autocomplete="off" role="textbox" placeholder="Search by Name or Email" />
+		            		</div>
+						</div>
+					</div>
+					<div class="slds-form-element Custom-searchInput Custom-select slds-m-left_small">
+					  <div class="slds-form-element__control">
+					    <div class="slds-select_container">
+					      <select class="slds-select Custom-searchInput " id="select-01">
+					        <option value="">Both</option>
+					        <option>Option One</option>
+					        <option>Option Two</option>
+					        <option>Option Three</option>
+					      </select>
+					    </div>
+					  </div>
+					</div>
+					<div class="slds-form-element Custom-searchInput Custom-select slds-m-left_small">
+					  <div class="slds-form-element__control">
+					    <div class="slds-select_container">
+					      <select class="slds-select Custom-searchInput " id="select-01">
+					        <option value="">All</option>
+					        <option>Option One</option>
+					        <option>Option Two</option>
+					        <option>Option Three</option>
+					      </select>
+					    </div>
+					  </div>
+					</div>
+					<div>
+						<button class="slds-button slds-m-left_small ">
+							<img class="button-width" src="assets/apps_60.png">
+						</button>
+					</div>
+					<div>
+						<button class="slds-button">
+							<img class="button-width" src="assets/rows_60.png">
+						</button>
+					</div>
+					<div>
+						<button class="slds-button slds-m-left_large slds-m-right_small">
+							<img class="button-width" src="assets/download_60.png">
+						</button>
+					</div>
+						
+				</div>
+				<div class=" slds-grid slds-grid_vertical table-header slds-m-top_large Custom-desktop-cards Custom-cards">
+					<div class="slds-show_large slds-grid slds-m-bottom_medium">
+						<div class="slds-medium-size_4-of-12 slds-text-heading_small slds-m-left_xx-large slds-text-color_weak" >Name</div>
+						<div class="slds-medium-size_2-of-12 slds-text-heading_small slds-text-color_weak" >Total Contribution</div>
+						<div class="slds-medium-size_2-of-12 slds-text-heading_small slds-text-color_weak" >Total Distribution</div>
+						<div class="slds-medium-size_2-of-12 slds-text-heading_small slds-text-color_weak" >Total Balance</div>
+						<div class="slds-medium-size_2-of-12 slds-text-heading_small slds-m-right_large slds-text-color_weak" >Details</div>
+					</div>
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image1.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center custom-remove-margin">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image2.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image3.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image4.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image5.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image6.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image7.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+					<article class="slds-col slds-card Custom-row Custom-cards-container slds-m-horizontal_large Custom-card_size card-align-center">
+						<div class="slds-media__body slds-grid Custom-card Custom-desktop-row">
+							<div class="slds-large-col slds-large-size_4-of-12 Custom-desktop-container slds-m-top_small card-align-center">
+								<img class="Custom-round-image slds-m-bottom_medium change-image_size" src="assets/image8.jpeg">
+<!-- 								<img class="slds-icon slds-icon_x-small  slds-hide_large" src="assets/dot link.png">
+ -->								<div class="slds-m-top_small custom-font_size extra-padding">
+									Liam Payne
+								</div>
+							</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">liampayne@gmail.com</div>
+							<div class="slds-hide_large slds-m-top_medium slds-text-color_weak">Total Contributions</div>
+							<div class="slds-large-size_2-of-12 slds-m-top_medium extra-margin custom-font_size">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-large-size_2-of-12 slds-m-top_medium extra-margin">$821,243</div>
+							<div class="slds-show_large slds-m-top_small extra-margin">
+								<img class="slds-icon slds-icon_small" src="assets/open .png">
+								<span class="Custom-Sidebar_Text-blue">View</span>
+								<img class="slds-icon slds-icon_x-small slds-m-left_small" src="assets/dot link.png">
+							</div>
+						</div>
+						<footer class="slds-m-top_medium slds-card__footer slds-hide_large">
+							<div class="Custom-Sidebar_Text-blue">View</div>
+						</footer>
+					</article>
+
+				</div>
+			</div>
+				
+	
+		</div>
+	</main>
+</body>
+<script type="text/javascript">
+		const mobileHB = document.getElementById('hamburger');
+		console.log(mobileHB)
+		let mobileHBClose = document.getElementById('hidden-close');
+		let mobileSidebar = document.getElementById('sidebar');
+		let data = document.getElementById('data');
+		function showNav(){
+			sidebar.classList.remove('slds-show_large');
+			sidebar.classList.add('slds-show_x-small');
+			mobileHB.classList.add('hide');
+			mobileHBClose.classList.remove('hide');
+			mobileHBClose.classList.add('slds-show_x-small');
+			data.style["overflow"] = "hidden";
+		}
+		function hideNav(){
+			sidebar.classList.remove('slds-show_x-small');
+			sidebar.classList.add('slds-show_large');
+			mobileHBClose.classList.add('hide');
+			mobileHB.classList.remove('hide');
+		}
+	</script>
+</html>
